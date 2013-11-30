@@ -1,0 +1,71 @@
+<html>
+  <script src="jquery-1.10.2.min.js"></script>
+  <script src="search.js"></script>
+  <style>
+    fieldset { border:0px; }
+    .results {margin-top: 20px;}
+    .resultHeader {
+      background: #63f;
+      display: none;
+      margin-top: 20px;
+      color: #fff;
+    }
+    .result {
+      margin: 0 50px;
+      width: 300px;
+    }
+    .result .city {
+      float: left;
+      width: 200px;
+      padding: 0 10px;
+    }
+    .noresults {display: none}
+    .even { background: #eee;}
+    .odd { background: #cff;}
+    .raw { 
+      color: grey;
+      display: none;
+      margin: 20px 50px;
+    }
+    .raw div {
+      padding: 10px;
+    }
+    .learnmore {
+      margin: 50px;
+    }
+    .learnmore p {
+      width: 300px;
+    }
+    .learnmore .link {
+      text-decoration:underline;
+      color:#8f1f08;
+      display: none;
+    }
+  </style>
+  <body>
+    <h1> Search for cities in the world! </h1>
+    <form>
+      <fieldset>
+        <label for="query">Start typing a city name:</label>
+        <input id="query" type="text" size="80">
+      </fieldset>
+    </form>
+    <div class="results">
+      <div id="prettyHeader">
+        <div class="result resultHeader"><div class="city">City name</div><div class="score">Population</div></div>
+      </div>
+      <div class="noresults result">No matching results found.</div>
+      <div id="prettyResponse"></div>
+    </div>
+    <div class="raw">
+      <span>Json response:</span>
+      <div class="rawResponse"></div>
+    </div>
+    <div class="learnmore">
+      <div class="link">Learn more</div>
+      <p> This demo provides autocomplete API over all cities in the world. It is based on this github project. </p>
+      <p> It supports search by prefix of every term: for <i>"pa"</i>, it will match <b>Paris</b>, <b>Patna</b>; as well as, <b>Sao Paulo</b> and <b>El Paso</b>. But it does not do substring searches, e.g., "pa" would not match <b>Bho<i>pa</i>l<b>. </p>
+    </div>
+  </body>
+</html>
+

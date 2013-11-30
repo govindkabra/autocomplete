@@ -1,0 +1,14 @@
+package model;
+
+option java_package="com.gtech.model";
+option java_outer_classname="TermScoreProtos";
+
+message TermScore {
+  required string name = 1;
+  required int32 score = 2;
+}
+
+message TermScoreDataset {
+  repeated TermScore termScore = 1;
+}
+
