@@ -1,3 +1,5 @@
+A server code to support prefix searches for Autocomplete API on large datasets.
+
 This is a library to support Autocomplete API for arbitrary dataset. For any
 prefix query, it returns top 10 matches in constant time. The system is
 available as interactive command line interface, as well as through an embedded
